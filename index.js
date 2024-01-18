@@ -2,7 +2,9 @@
 const contMais = document.getElementById("contMais");
 const reset = document.getElementById("reset");
 const contLabel = document.getElementById("contLabel");
-let contador = 100;
+let contador = 0;
+
+contLabel.textContent = contador;
 
 contMais.onclick = function(){
     contador++;
