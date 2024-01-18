@@ -1,0 +1,19 @@
+#contLabel{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: Helvetica;
+}
+#containerBTN{
+    text-align: center;
+}
+
+#descriLoja1{
+    text-align: left;
+    font-family: Helvetica;
+    font-size:1.5em
+}
+
+#containerLOJA{
+    text-align: left;
+}
