@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+=======
+#contLabel{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: Helvetica;
+}
+
+#containerBTN{
+    text-align: center;
+}
+
+#containerLOJA{
+    text-align: left;
+    font-family: Helvetica;
+    font-size:1.5em
+}
+>>>>>>> 4a6f2c224c929c52c63414822bf36bf54128b8f8
