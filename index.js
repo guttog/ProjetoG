@@ -1,31 +1,31 @@
-//BOTÕES
-const contMais = document.getElementById("contMais");
-const reset = document.getElementById("reset");
-const contLabel = document.getElementById("contLabel");
-let contador = 0;
+const colecao_objs =[
+    {id: 1, nome: "César", idade: 20,estado: "AM"},
+    {id: 2, nome: "Guto", idade: 19,estado: "BA"},
+    {id: 3, nome: "Julio", idade: 43,estado: "RJ"},
+    {id: 4, nome: "Gaiotto", idade: 80,estado:"SP" },
+    {id: 5, nome: "Alves", idade: 53, estado:"ES" }
+];
 
-contLabel.textContent = contador;
+function gerarTabela(){
+    var tabelaHTML = "<table border='1'>";
 
-contMais.onclick = function(){
-    contador++;
-    contLabel.textContent = contador;
-}
+    tabelaHTML += "<tr><th>Nome</th><th>Idade</th><th>Estado</th>";
+    
+    for(var i = 0; i < colecao_objs.length; i++){
 
-reset.onclick = function(){
-    contador = 0;
-    contLabel.textContent = contador;
-}
-//FIM DA FUNÇÃO DOS BOTÕES
+        tabelaHTML += "<tr>";
+        tabelaHTML += "<td>" + colecao_objs[i].nome+ "</td>";
+        tabelaHTML += "<td>" + colecao_objs[i].idade+ "</td>";
+        tabelaHTML += "<td>" + colecao_objs[i].estado+ "</td>";
+        tabelaHTML += "</tr>";
+    
+        };
+        tabelaHTML+="</table>";
 
-const Loja1 = document.getElementById("Loja1");
+        document.getElementById("tabela-container").innerHTML = tabelaHTML;
+    };
+   
 
-Loja1.onclick = function(){
-    if (contador >= 100){
-        contador -= 100;
-        contLabel.textContent = contador;
-        contMais.onclick = function(){
-            contador += 2;
-            contLabel.textContent = contador;
-        }
-    }
-}
+    window.onload = function(){
+        gerarTabela();
+    };
